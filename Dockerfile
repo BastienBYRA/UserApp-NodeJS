@@ -1,6 +1,6 @@
-FROM node:latest 
+# Dockerfile pour l'application Noje.js/Express
 
-RUN apt-get update && apt-get install -y mongodb
+FROM node:14-alpine
 
 WORKDIR /app
 
