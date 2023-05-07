@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  web:
+    image: 8271/nodejs_userapp:1.0
+    container_name: node-app
+    restart: always
+    ports:
+      - "4000:4000"
+    environment:
+      MONGO_URI: mongodb://mongo-db:27017/mns
+    depends_on:
+      - mongo
+    networks:
+      - nodejs_app
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo-db
+    restart: always
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - nodejs_app
+
+volumes:
+  mongodb_data:
+
+networks:
+  nodejs_app:
+
