@@ -1,5 +1,7 @@
 # UserApp CRUD
 
+![](https://github.com/BastienBYRA/UserApp-NodeJS/blob/master/showcase/presentation-project.gif)
+
 ## Prérequis
 
 Veillez à avoir installé sur votre machine :
